@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shopwave-debug-fix/static/css/main.9d9e4ddc.css",
+    "main.js": "/shopwave-debug-fix/static/js/main.50bdf071.js",
+    "index.html": "/shopwave-debug-fix/index.html",
+    "main.9d9e4ddc.css.map": "/shopwave-debug-fix/static/css/main.9d9e4ddc.css.map",
+    "main.50bdf071.js.map": "/shopwave-debug-fix/static/js/main.50bdf071.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d9e4ddc.css",
+    "static/js/main.50bdf071.js"
+  ]
+}
