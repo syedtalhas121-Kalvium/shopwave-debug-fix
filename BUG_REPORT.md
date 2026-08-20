@@ -124,3 +124,11 @@ const updatedOrders = orders.map((order) =>
 setOrders(updatedOrders);
 ```
 
+## Verification and Deployment
+
+The corrected application was verified in the browser: rapid Product Search input showed the latest query's results, and changing `ORD-1001` from `delivered` to `shipped` updated the badge immediately after the API response.
+
+Public deployment: <https://syedtalhas121-Kalvium.github.io/shopwave-debug-fix/>
+
+Verification video: <https://drive.google.com/file/d/1Jrr7gsv1LWn48KmpUmv2_vFPzAMTELT3/view?usp=sharing>
+
