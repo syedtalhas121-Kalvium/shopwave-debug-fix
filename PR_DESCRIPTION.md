@@ -27,3 +27,11 @@ The walkthrough video is available on Google Drive with anyone-with-the-link vie
 ## Notes
 
 The infinite request loop was the most damaging symptom because it could freeze the browser while leaving no obvious application error. The stale-data bug was harder to spot because it depends on response timing and fast typing. The immutable update bug was especially subtle because the API succeeded and the in-memory object changed, but React did not receive a new state reference.
+
+## Assessment Evidence
+
+For assessment review, use [`ASSESSMENT_EVIDENCE.md`](./ASSESSMENT_EVIDENCE.md). It provides the walkthrough video, live deployment, pull request, exact commit links, and verification summary in one place.
+
+- Video: https://drive.google.com/file/d/1Jrr7gsv1LWn48KmpUmv2_vFPzAMTELT3/view?usp=sharing
+- Live app: https://syedtalhas121-Kalvium.github.io/shopwave-debug-fix/
+- Evidence index: `ASSESSMENT_EVIDENCE.md`
