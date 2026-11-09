@@ -29,7 +29,7 @@ The PR history now includes descriptive commit messages and this evidence index:
 | [`17c6c4b`](https://github.com/syedtalhas121-Kalvium/shopwave-debug-fix/commit/17c6c4b7be1235114dc5e904cc6f7da4c3c6d7ee) | Fix the three React state-management bugs. |
 | [`e385850`](https://github.com/syedtalhas121-Kalvium/shopwave-debug-fix/commit/e38585091ca23264548bfa6cbceebbc01e4d793b) | Configure GitHub Pages deployment. |
 | [`4c96a5d`](https://github.com/syedtalhas121-Kalvium/shopwave-debug-fix/commit/4c96a5df0746f163101c954a088cf2ffcf4ef17d) | Add the initial verification links and notes. |
-| **latest evidence commit** | Add this assessment index and make the commit/evidence trail explicit. |
+| [`7bb9216`](https://github.com/syedtalhas121-Kalvium/shopwave-debug-fix/commit/7bb92164c52119ce86131b3202cabe7f444181d2) | Add this assessment index and make the commit/evidence trail explicit. |
 
 ## Verification summary
 
