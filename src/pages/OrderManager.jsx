@@ -49,14 +49,12 @@ export default function OrderManager() {
     //
     // ───────────────────────────────────────────────────
 
-    const updatedOrders = orders;                  // ❌ same array reference
-    const order = updatedOrders.find(
-      (o) => o.id === orderId
+    // Fix Bug #3: create a new array and replace only the changed order,
+    // so React can detect the immutable state update and re-render the badge.
+    const updatedOrders = orders.map((order) =>
+      order.id === orderId ? { ...order, status: newStatus } : order
     );
-    if (order) {
-      order.status = newStatus;                    // ❌ mutates existing object
-    }
-    setOrders(updatedOrders);                      // ❌ React: "same ref → skip re-render"
+    setOrders(updatedOrders);
 
     setSaving(null);
   };

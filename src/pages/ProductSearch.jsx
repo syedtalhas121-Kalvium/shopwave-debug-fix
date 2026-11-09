@@ -39,22 +39,23 @@ export default function ProductSearch() {
     }
 
     setLoading(true);
+    let isStale = false;
 
-    searchProducts(query).then((data) => {
-      setResults(data);    // ← ask yourself: does calling this affect the deps?
-      setLoading(false);
-    });
+    // Fix Bugs #1 and #2: depend only on the query that triggers the search,
+    // debounce rapid input, and ignore responses from superseded requests.
+    const debounceTimer = setTimeout(() => {
+      searchProducts(query).then((data) => {
+        if (isStale) return;
+        setResults(data);
+        setLoading(false);
+      });
+    }, 300);
 
-    // ❌ Bug #1: `results` is listed as a dependency.
-    //    Every setResults() call changes `results`, which re-runs this effect,
-    //    which calls setResults() again → infinite loop.
-  }, [query, results]);    // 👈 something is wrong here
-
-  // ❌ Bug #2: No debounce, no cleanup function.
-  //    Every keystroke fires a new request immediately.
-  //    A slower request for "head" can resolve after a
-  //    faster one for "headphones", overwriting results
-  //    with stale data.
+    return () => {
+      isStale = true;
+      clearTimeout(debounceTimer);
+    };
+  }, [query]);
 
   return (
     <div className="page">
